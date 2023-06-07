@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="practice.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Budget App</h1>
+        <div id="budget-form">
+            <div class="form-group">
+                <h2>Add Total Budget</h2>
+                <label for="total-budget">Total Budget:</label>
+                <input type="number" id="total-budget" placeholder="Enter total budget">
+                <button class="btn" onclick="addTotalBudget()">Add Total Budget</button>
+            </div>
+            <p id="budget-error" class="error"></p>
+        </div>
+    
+        <div id="category-form">
+            <div class="form-group">
+                <h2>Add Category</h2>
+                <label for="category-name">Category Name:</label>
+                <input type="text" id="category-name" placeholder="Enter category name">
+                <button class="btn" onclick="addCategory()">Add Category</button>
+            </div>
+            <p id="category-error" class="error"></p>
+        </div>
+    
+    
+        <div id="expense-form">
+            <div class="form-group">
+                <h2>Add Expense</h2>
+                <label for="expense-date">Date:</label>
+                <input type="date" id="expense-date">
+            </div>
+            <div class="form-group">
+                <label for="expense-category">Category:</label>
+                <select id="expense-category"></select>
+            </div>
+            <div class="form-group">
+                <label for="expense-amount">Amount:</label>
+                <input type="number" id="expense-amount" placeholder="Enter expense amount">
+                <button class="btn" onclick="addExpense()">Add Expense</button>
+            </div>
+            <p id="expense-error" class="error"></p>
+        </div>
+    
+        <div id="expense-table">
+            <h2>Expenses</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+                </thead>
+                <tbody id="expense-table-body"></tbody>
+            </table>
+        </div>
+    </div>
+   <script src="practice.js"></script>
+ </body>
+</html>
